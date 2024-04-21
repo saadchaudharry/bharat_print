@@ -1,0 +1,325 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+
+
+    <!--/Banner-Start-->
+    <section class="banner-19">
+        <div class="banner-layer">
+            <video autoplay="" muted="" loop="" id="myVideo">
+                <source src="/media/assets/images/video_main.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            <div class="main-content-top">
+                <div class="container">
+                    <div class="main-content">
+                        <div class="w3lbanner-left">
+                            <!-- if logo is image enable this   
+                        <a class="logo" href="index.html">
+                            <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+                        </a> -->
+                            <h6> </h6>
+                            <h4>Offering shine to excellence<br><span class="sub-color"> Printing Stuff</span></h4>
+
+                            <a href="about.html" class="btn btn-style btn-secondary mt-md-5 mt-4">Read More</a>
+                        </div>
+                        <div class="w3lbanner-right">
+                            <p>Your one-stop hub for
+                                <span class="sub-color"> cutting edge printing and design solutions</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--//Banner-End-->
+
+    <section class="w3l-grids-3hny py-3" id="grids1">
+        <div class="container py-lg-5 py-md-3">
+            <div class="wthree-header-section text-center">
+                <h6 class="title-subw3hny">What We Do</h6>
+                <h3 class="title-w3l mb-4">What We’re Offering</h3>
+            </div>
+            <div class="grids-of-3 row text-center">
+
+                {% for i in top_content  %}
+                    <div class="col-lg-4 col-md-6 mt-5">
+                        <div class="grids3-info">
+                            <a href="#service" class="d-block zoom"><img src="/media/{{ i.image }}" alt=""
+                                    class="img-fluid radius-image"></a>
+                            <div class="grids-of-3-saas-info">
+                                <h5><a href="#service" class="title">{{ i.title }}</a></h5>
+                                <p class="saas-para"> {{ i.description  }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <!--/About-section-->
+    <section class="w3l-about-6 py-5" id="about">
+        <div class="container py-lg-5 py-md-3">
+            <div class="row align-items-center">
+                <div class="col-lg-6 pe-lg-5">
+                    <h6 class="title-subw3hny">Our Info</h6>
+                    <h3 class="title-w3l">Bharat Print creates things for your success future</h3>
+                    <p class="mt-md-4 mt-3"><b class="text-success">At Bharat Print,</b> we have the advanced
+                        equipment and skilled technicians to handle all your printing needs, from short-run digital
+                        projects to <span class="sub-color">high-volume offset printing.</span> </p>
+                    <ul class="service-list pt-lg-2 mt-4">
+
+                        <li class="service-link"><a href="#url"><span class="fa fa-check-circle"></span> Offset printing
+                                for high-volume, cost-effective projects </a></li>
+                        <li class="service-link"><a href="#url"><span class="fa fa-check-circle"></span> Specialty
+                                printing like foil stamping, embossing, and more </a></li>
+                        <li class="service-link"><a href="#url"><span class="fa fa-check-circle"></span> Book printing,
+                                from single copies to bulk orders
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="HomeAboutImages col-lg-6 mt-lg-0 mt-5">
+                    <div class="row position-relative">
+                        <div class="col-6">
+                            <img src="/media/assets/images/vertical_offset.jpg" alt="" class="radius-image img-fluid">
+                        </div>
+                        <div class="col-6 mt-4">
+                            <img src="/media/assets/images/pro-02-470x420.jpg" alt=""
+                                class="radius-image img-fluid mb-md-3 mb-2">
+                            <img src="/media/assets/images/blog4.png" alt="" class="radius-image img-fluid mt-md-3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--//About-section-->
+    <!--/w3l-grids-3hny-->
+    <section class="w3l-grids-3hny py-5" id="grids1">
+        <div class="container py-lg-5 py-md-3">
+            <div class="wthree-header-section text-center">
+                <h6 class="title-subw3hny">What We Do</h6>
+                <h3 class="title-w3l mb-4">What We’re Offering</h3>
+            </div>
+
+            <section class="splide" id="service_slider" aria-label="Splide Basic HTML Example">
+                <div class="splide__track">
+                    <ul class="splide__list">
+
+
+                    {% for i in service %}
+                        <li class="splide__slide card-deck  ">
+                            <div class="card rounded  text-center" >
+                                <div style="max-width: 475px;max-height:350px;">
+                                    <img class="card-img-top img-fluid" src="/media/{{ i.image }}" alt="Card image cap" 
+                                        style="width: 100%;
+                                               height: 350px;
+                                               object-fit: fill;"
+                                    >
+                                </div>
+                                <div class="card-body text-wrap "
+                                    style="background: rgb(245,253,45);background: linear-gradient(66deg, rgba(245,253,45,1) 0%, rgba(253,187,45,1) 38%);">
+                                    <h5 class="card-title text-wrap ">{{ i.title  }}</h5>
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor  %}
+
+
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+    </section>
+    <!--//w3l-grids-3hny-->
+    <!-- /home-page-video-popup-->
+
+
+    <section class="w3l-index5 py-5" id="about">
+        <div class="new-block py-md-5 py-3">
+            <div class="container">
+                <div class="row middle-section align-self">
+                    <div class="col-lg-7 video-info pe-lg-5">
+                        <div class="title-content text-left">
+                            <h6 class="title-subw3hny">Bharat Print</h6>
+                            <h3 class="title-w3l two pe-lg-5">Elevate Your Printing with Bharat Print </h3>
+                            <p class="mt-3 pe-lg-5">Elevate Your Printing with Bharat Print</p>
+                            <p class="mt-3 pe-lg-5">At Bharat Print, we believe that great printing is the foundation
+                                for business success. Our state-of-the-art printing solutions and expert team are
+                                dedicated to delivering high-quality, cost-effective prints that help you make a lasting
+                                impression.</p>
+                            <a href="{% url 'cont' %}" class="btn btn-style btn-outline-light mt-sm-5 mt-4">Discover
+                                More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 history-info mt-5 ps-lg-5 align-self">
+                        <div class="position-relative mt-lg-0 mt-5 pt-lg-0 pt-5 pb-lg-0 pb-5">
+                            <a href="#small-dialog"
+                                class="popup-with-zoom-anim play-view text-center position-absolute">
+                                <span class="video-play-icon">
+                                    <span class="fa fa-play"></span>
+                                </span>
+                            </a>
+                            <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //home-page-video-popup-->
+    <!--/w3l-circles-->
+    <section class="w3l-circles py-5" id="circles">
+        <div class="container py-md-5 py-2">
+            <!--/row-2-->
+            <div class="row w3l-circles">
+                <div class="col-lg-6 circles-left">
+                    <img src="/media/assets/images/Thank-You-Card-Blog7.webp" alt="" class="radius-image img-fluid">
+                </div>
+                <div class="col-lg-6 circles-right mt-lg-0 mt-5 align-self  position-relative">
+                    <h6 class="title-subw3hny">Why Us</h6>
+                    <h3 class="title-w3l mb-4">Your Trusted Printing Partner</h3>
+                    <p class="mb-5">We offer a wide range of print products to suit every need. In addition to our standard print products, we also offer custom print solutions to meet your unique printing requirements. We can work with you to create a custom print product that fits your specific needs and budget
+                   .</p>
+                    <div class="progress-circles-grids">
+                        <div class="progress-circles">
+                            <div class="progress-left">
+                                <div class="circle1">
+                                    <div id="progress" data-dimension="80" data-text="99%" data-fontsize="18"
+                                        data-percent="99" data-fgcolor="#006837" data-bgcolor="#f3f5f4" data-width="10"
+                                        data-bordersize="4" data-animationstep="2">
+                                    </div>
+
+                                </div>
+                                <div class="progress-right">
+                                    <h4>Graphic Design Solutions</h4>
+                                        <p >Graphic Design.</p>
+                                        <p >Logo Design.</p>
+                                        <p >Marketing Materials.</p>
+                                        <p >Menu Printing.</p>
+                                        <p >Personal Projects & Gifts.</p>
+                                        <p >Presentation Materials.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="progress-circles">
+                            <div class="progress-left">
+                                <div class="circle1">
+                                    <div id="progress1" data-dimension="80" data-text="95%" data-fontsize="18"
+                                        data-percent="95" data-fgcolor="#006837" data-bgcolor="#f3f5f4" data-width="10"
+                                        data-bordersize="4" data-animationstep="2">
+                                    </div>
+                                </div>
+                                <div class="progress-right">
+                                    <h4>Quality Marketing & Design service    </h4>
+                                    <p class="mb-lg-5">Eye catching designs and action based marketing campaigns..</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--//row-2-->
+        </div>
+    </section>
+    <!--//circles-section-->
+    <!--/testimonials-->
+    <section class="w3l-testimonials" id="testimonials">
+        <!-- /grids -->
+        <div class="cusrtomer-layout py-5">
+            <div class="container py-lg-4 py-md-3 py-2 pb-lg-0">
+                <h5 class="title-subw3hny text-center mb-1">Happy Clients</h5>
+                <h3 class="title-w3l two text-center mb-sm-5 mb-4">Reviews and Testimonials</h3>
+                <!-- /grids -->
+                <div class="testimonial-width">
+                    <div id="owl-demo1" class="owl-two owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="testimonial-content">
+                                <div class="testimonial">
+                                    <i class="fas fa-quote-right"></i>
+                                    <blockquote>
+                                        <q>Lorem ipsum dolor sit amet elit. Velit beatae
+                                            laudantium voluptate rem ullam dolore nisi voluptatibus esse quasi,
+                                            doloribus tempora.
+                                            Dolores molestias adipisci dolo amet!. Lorem ipsum dolor sit amet
+                                            consectetur
+                                            adipisicing elit. Esse architecto est ea sunt eligendi cum?</q>
+                                    </blockquote>
+                                    <div class="testi-des">
+                                        <div class="test-img"><img src="/media/assets/images/Services6.db75b7b1.jpg" class="img-fluid"
+                                                alt="client-img">
+                                        </div>
+                                        <div class="peopl align-self">
+                                            <h3>John wilson</h3>
+                                            <p class="indentity">Example City</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- /grids -->
+        </div>
+        <!-- //grids -->
+    </section>
+    <!-- //testimonials -->
+    <!--/home-stats-->
+    <section class="w3l-stats-main py-5" id="stats">
+        <div class="container py-lg-4">
+            <div class="row stats-con">
+                <div class="col-lg-6 stats-content-left pe-lg-5">
+                    <div class="stats_info counter_grid1 text-left">
+                        <div class="icon stat-icon">
+                            <span class="fas fa-users"></span>
+                            <p class="counter">2000+</p>
+                        </div>
+                        <div class="stat-icon-des text-left">
+
+                            <h3 class="title-w3l">
+                                Clients
+                            </h3>
+                            <p class="para-stat">We take pride in our latest collaborations with diverse clients
+                                who have entrusted us with their Printing needs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 stats-content-left ps-lg-5 mt-lg-0 mt-md-5 mt-4">
+                    <div class="stats_info counter_grid1 text-left">
+                        <div class="icon stat-icon">
+                            <span class="fas fa-tractor"></span>
+                            <p class="counter">1996</p>
+                        </div>
+                        <div class="stat-icon-des text-left">
+                            <h3 class="title-w3l">
+                                Since's</h3>
+                            <p class="para-stat">We have been successfully serving our esteemed clients for over 28 years
+                                .</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--//home-stats-->
+
+
+
+
+
+
+{%  endblock  %}

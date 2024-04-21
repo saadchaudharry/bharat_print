@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block style %}
+
+ .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+  }
+
+{% endblock  %}
+
+
+
+
+{% block body %}
+    <!--/inner-page-->
+    <div class="inner-banner py-5">
+        <section class="w3l-breadcrumb text-left py-sm-5 ">
+            <div class="container">
+                <div class="w3breadcrumb-gids">
+                    <div class="w3breadcrumb-left text-left">
+                        <h2 class="inner-w3-title">
+                            Clientele </h2>
+                        <p class="inner-page-para mt-2">
+                            Better Printing
+                            for Better Future </p>
+                    </div>
+                    <div class="w3breadcrumb-right">
+                        <ul class="breadcrumbs-custom-path">
+                            <li><a href="index.html">Home</a></li>
+                            <li class="active"><span class="fas fa-angle-double-right mx-2"></span> Contact Us</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <!--//inner-page-->
+    <!-- contact-form -->
+    <section class="w3l-contact-main" id="contact">
+        <div class="contact-infhny py-3">
+            <div class="container py-md-5">
+                <div class="title-content text-center mb-md-5 mb-4">
+                    <!-- <h6 class="title-subw3hny">OUR CLIENTS                    </h6> -->
+                    <h3 class="title-w3l mx-lg-5 sub-color">OUR CLIENTS.</h3>
+                    <p class="text-para mt-2">Welcome to our portfolio of success! We take pride in our latest collaborations with diverse clients <br> who have entrusted us with their Printing needs.                        .</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- //CLIENTS-form -->
+    <section   class="container pb-md-5">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+
+            
+
+        {% for i in Clients %}
+            <div class="col">
+
+            <div class="card shadow-sm  rounded-3" data-aos="fade-up" data-aos-delay="100" style="border:5px solid #fa9f1e">
+                <img src="/media/{{ i.thumbnail }}" class="img-fluid card-img-top mx-auto" alt="">
+            </div>
+
+            </div>
+        {% endfor %}
+
+
+    
+    
+    </div>
+    </section>
+
+
+{% endblock %}
