@@ -31,11 +31,11 @@ class productADI(ImportExportModelAdmin,admin.ModelAdmin):
     class Meta:
         model=products
 
-admin.site.register(catagory,catagoryAdmin)
-admin.site.register(products,productADI)
-admin.site.register(Specification)
+# admin.site.register(catagory,catagoryAdmin)
+# admin.site.register(products,productADI)
+# admin.site.register(Specification)
 admin.site.register(Service)
-admin.site.register(Blogpost)
+# admin.site.register(Blogpost)
 admin.site.register(Phone_number)
 admin.site.register(Top_content)
 
@@ -46,4 +46,4 @@ class ProjectADI(ImportExportModelAdmin,admin.ModelAdmin):
     list_display  = ('title','position', )
     list_filter   = ('Enable','index',  )
 
-admin.site.register(Project,ProjectADI)
+# admin.site.register(Project,ProjectADI)

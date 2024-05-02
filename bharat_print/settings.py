@@ -58,7 +58,7 @@ ROOT_URLCONF = 'bharat_print.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': ['/home/bharatprint/bharat_print/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
