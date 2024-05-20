@@ -18626,7 +18626,7 @@ a.dropdown-item.active {
 }
 
 .banner-19 .banner-layer {
-    background: url(../images/banner1.jpg) no-repeat center;
+    background: url(../images/blog4.png) no-repeat center;
     -ms-background-size: cover;
     background-size: cover;
     z-index: 0;
@@ -19547,7 +19547,7 @@ p.para-stat {
 /*--//stats--*/
 /*--/inner-banner--*/
 .inner-banner {
-    background: url(https://www.simco-ion.co.uk/wp-content/uploads/header-simco-ion.jpg) no-repeat center;
+    background: url(/media/assets/images/header-simco-ion.webp) no-repeat center;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;

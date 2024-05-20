@@ -31,6 +31,10 @@
 
 <!-- MENU-JS -->
 <script>
+    var isMobileDevice = (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+    var currentPath = window.location.pathname;
+    var navLinks = document.querySelectorAll('nav a');
+ 
     $(window).on("scroll", function () {
         var scroll = $(window).scrollTop();
 
@@ -38,6 +42,19 @@
             $("#site-header").addClass("nav-fixed");
         } else {
             $("#site-header").removeClass("nav-fixed");
+            if (isMobileDevice) {
+                for (var i = 0; i < navLinks.length; i++) {
+                    var link = navLinks[i];
+                    if (link.getAttribute('href') === currentPath) {
+                        link.classList.add('active');
+                    }
+                    else if (isMobileDevice) {
+
+                        link.classList.add('text-dark');
+                    }
+
+                }
+            }
         }
     });
 
@@ -55,14 +72,17 @@
             }
         });
     });
-    var currentPath = window.location.pathname;
-    var navLinks = document.querySelectorAll('nav a');
- 
+
     for (var i = 0; i < navLinks.length; i++) {
         var link = navLinks[i];
         if (link.getAttribute('href') === currentPath) {
             link.classList.add('active');
         }
+        else if (isMobileDevice) {
+            
+            link.classList.add('text-dark');
+        }
+
     }
 </script>
 <!-- //MENU-JS -->
